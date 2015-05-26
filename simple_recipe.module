@@ -2,13 +2,14 @@
 
 function simple_recipe_form_alter(&$form, &$form_state, $form_id) {
     if($form_id == 'recipe_node_form') {
-        $form['revision_information'] = FALSE;
-        $form['author'] = FALSE;
-        $form['comment_settings'] = FALSE;
-        $form['options'] = FALSE;
-        $form['menu'] = FALSE;
-        print '<pre>';
-        print_r($form);
-        print '</pre>';
+        $form['revision_information']['#access'] = 0;
+        $form['author']['#access'] = 0;
+        $form['comment_settings']['comment']['#default_value'] = 1;
+        $form['comment_settings']['#access'] = 0;
+        $form['options']['#access'] = 0;
+        $form['menu']['#access'] = 0;
+        // print '<pre>';
+        // print_r($form);
+        // print '</pre>';
     }
 }
