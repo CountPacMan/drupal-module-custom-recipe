@@ -2,4 +2,4 @@ name = Custom Recipe
 description = This module alters the custom content type for recipes.
 package = Epicodus
 core= 7.x
-files[] = custom_recipe.module
+files[] = simple_recipe.module

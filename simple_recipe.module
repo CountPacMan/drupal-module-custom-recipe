@@ -1,0 +1,14 @@
+<?php
+
+function simple_recipe_form_alter(&$form, &$form_state, $form_id) {
+    if($form_id == 'recipe_node_form') {
+        $form['revision_information'] = FALSE;
+        $form['author'] = FALSE;
+        $form['comment_settings'] = FALSE;
+        $form['options'] = FALSE;
+        $form['menu'] = FALSE;
+        print '<pre>';
+        print_r($form);
+        print '</pre>';
+    }
+}
